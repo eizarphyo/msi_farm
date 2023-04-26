@@ -122,6 +122,7 @@
       .card__link:hover,
       .card__link:active {
         background-color: #9be15d;
+        cursor: pointer;
       }
 
       .card__link span {
@@ -129,7 +130,7 @@
       }
 
       .card:hover {
-        transform: skewX(-20deg) scale(1.08);
+        transform: skewX(-20deg) scale(1.06);
         box-shadow: 0 3rem 8rem 2rem rgba(0, 0, 0, 0.15);
       }
 
@@ -145,4 +146,20 @@
 
       .not-organic {
         display: none;
+      }
+
+      .cart-plus {
+        width: 6%;
+        font-size: 2.3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #444;
+        color: #fff;
+        border-left: 1px solid rgb(153, 153, 153, 0.4);
+      }
+
+      .cart-plus:hover {
+        cursor: pointer;
+        background-color: #666 !important;
       }

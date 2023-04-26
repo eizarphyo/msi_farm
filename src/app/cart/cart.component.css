@@ -1,0 +1,54 @@
+.cart {
+    font-size: 3.5em;
+    float: right;
+    position: relative;
+    /* right: 0; */
+    z-index: 99;
+    
+}
+
+.cart:hover {
+    cursor: pointer;
+    color: #777;
+    
+}
+
+.noti-ball {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 7px;
+    right: -7px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.cart-inside {
+    position: absolute;
+    border-radius: 3px;
+    background-color: rgba(68, 68, 68, 0.8);
+    color: #fff;
+    z-index: 99;
+    top: 110px;
+    right: 50px;
+    font-size: 1.6em;
+    padding: 5px
+}
+
+#noItems p {
+    font-size: 1.8em;
+}
+
+.cart-inside ul li {
+    list-style-type: none;
+    float: left;
+    font-size: 1.1em;
+}
+
+.show {
+    display: inline;
+}
+
+.hide {
+    display: none;
+}

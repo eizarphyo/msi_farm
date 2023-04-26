@@ -6,7 +6,8 @@ import { ProductComponent } from './product/product.component';
 const routes: Routes = [
   {
     path: '',
-    component: OverviewComponent
+    component: OverviewComponent,
+    pathMatch: 'full'
   },
   {
     path: "overview",
@@ -14,6 +15,10 @@ const routes: Routes = [
   },
   {
     path: "product",
+    component: ProductComponent
+  },
+  {
+    path: "overview/:productid",
     component: ProductComponent
   }
 ];

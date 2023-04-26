@@ -1,0 +1,23 @@
+<div class="cart-container">
+  <span class="cart" (click)="showCartInside()">
+    <ng-container *ngIf="selectedItems != '' && !isSeen">
+      <span class="noti-ball"></span>
+    </ng-container>
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  </span>
+
+  <div class="cart-inside" [ngClass]="{ hide: !openCart, show: openCart }">
+    <p>Products in Your Cart</p>
+    <hr style="border: 1px dashed #fff" />
+
+    <ul *ngIf="selectedItems != ''; else noItems">
+      <li *ngFor="let item of selectedItems; let i = index">
+        {{ item.image }}
+      </li>
+    </ul>
+
+    <ng-template #noItems>
+      <p>No products..</p>
+    </ng-template>
+  </div>
+</div>
