@@ -1,4 +1,4 @@
-import { Component, Input, } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -7,18 +7,22 @@ import { Component, Input, } from '@angular/core';
 })
 export class CartComponent {
   @Input() selectedItems?: any = [];
-  isSeen?: boolean;
-  openCart?: boolean;
+  @Input() isSeen?: boolean;
+  // @Output() nofityEvt = new EventEmitter;
 
-  showCartInside() {
-    // if (this.openCart) {
-    //   this.openCart = false;
-    //   console.log("ran if block. openCart >>", this.openCart)
-    // } else {
-    //   this.openCart = true;
-    //   console.log("ran else block. openCart >>", this.openCart)
-    // }
+  openCart?: boolean;
+  beforeArrayLength?: any;
+
+  showSelectedItems() {
     this.openCart = !this.openCart;
-    this.isSeen = true;
+
+    if (this.openCart) {
+      this.isSeen = true;
+      console.log("isSeen >>", this.isSeen);
+    }
+  }
+
+  removeItem(index: number) {
+    this.selectedItems.splice(index, 1);
   }
 }

@@ -8,6 +8,7 @@
         text-align: center;
         position: relative;
         word-spacing: 3px;
+        z-index: -1;
       }
 
       h1::before {

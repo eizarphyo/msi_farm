@@ -1,5 +1,10 @@
 <div class="container">
-  <app-cart [selectedItems]="selectedItems"></app-cart>
+  <app-cart
+    [isSeen]="!isItemAdded"
+    [selectedItems]="getSelectedItems()"
+  ></app-cart>
+  <!-- 
+    (notifyEvt)="checkLength($event) -->
 
   <h1>🌽 MSI Farm 🥦</h1>
 

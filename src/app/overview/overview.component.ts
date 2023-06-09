@@ -11,14 +11,15 @@ export class OverviewComponent {
 
   productDetails = this.service.productData;
   selectedItems?: any = [];
+  isItemAdded?: boolean;
+
+  selectedItem?: string;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private service: AllinoneService
   ) { }
-
-
 
   goToDetails(productid: number) {
     //this.router.navigateByUrl(`overview/${productid}`);
@@ -29,12 +30,13 @@ export class OverviewComponent {
   selectItem(item: any) {
     let index = this.selectedItems.length;
     this.selectedItems[index] = item;
-    console.log("selected item >>", this.selectedItems)
-
+    this.isItemAdded = true;
+    // console.log("selected item >>", this.selectedItems)
+    console.log("isItemAdded >>", this.isItemAdded);
   }
 
   getSelectedItems(): any {
+    this.isItemAdded = false;
     return this.selectedItems;
   }
-
 }
